@@ -16,6 +16,7 @@ window.addEventListener('load', function() {
 	var odstraniBarve = function(event) {
 		var gumb =document.getElementById("barve");
 		gumb.parentNode.removeChild(gumb);
+		
 	}
 	
 	document.querySelector("#odstraniBarve") 
@@ -41,9 +42,10 @@ window.addEventListener('load', function() {
 	
 	var stop = function(event) {
 		ustavi = true;
-		start.innerHTML = "Zaženi stroboskop";
-		start.removeEventListener('click', stop);
-		start.addEventListener('click', zagon);
+		var ustaviti=document.querySelector("#start");
+		ustaviti.innerHTML = "Zaženi stroboskop";
+		ustaviti.removeEventListener('click', stop);
+		ustaviti.addEventListener('click', zagon);
 	}
 	
 	var zagon = function(event) {
